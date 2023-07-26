@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<RelativeLayout
+        android:layout_margin="10dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp">
+    <androidx.cardview.widget.CardView
+            android:id="@+id/cv_main"
+            app:cardCornerRadius="@dimen/space_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+                android:id="@+id/lin_imag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/space_5"
+                android:weightSum="5">
+<!--            <LinearLayout-->
+<!--                android:id="@+id/lin_wave"-->
+<!--                android:gravity="center"-->
+<!--                android:background="@drawable/bg_back"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:backgroundTint="@color/black"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content">-->
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:id="@+id/iv_icon"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/bank"
+                    android:layout_gravity="center"
+                    />
+<!--            </LinearLayout>-->
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                     android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Withdraw"
+                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_name"
+                    android:textColor="@color/black"
+                    android:textSize="5pt"
+                    android:textAllCaps="true"
+                    style="@style/headingText"
+                    />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:id="@+id/lin_main"/>
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:visibility="gone"
+        android:background="@color/light_grey"/>
+</RelativeLayout>
+
+
+</RelativeLayout>

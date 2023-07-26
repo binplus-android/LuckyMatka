@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.StarGameListActivity">
+    <RelativeLayout
+
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/rel1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@android:color/transparent">
+
+                <ImageView
+                    android:id="@+id/gameSingleDigit"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="@dimen/space_5"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/game_single_digit_img" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/space_20"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent">
+
+                <ImageView
+                    android:id="@+id/gameSinglePanna"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/game_single_panna_img" />
+                <ImageView
+                    android:id="@+id/gameDoublePanna"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/game_double_panna_img" />
+                <ImageView
+                    android:id="@+id/gameTriplePanna"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/game_triple_panna_img" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rv_games"/>
+    </RelativeLayout>
+</RelativeLayout>

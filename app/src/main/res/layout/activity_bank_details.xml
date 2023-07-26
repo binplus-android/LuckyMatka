@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.BankDetailActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/space_20"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account Holder Name"
+                android:padding="@dimen/space_5"/>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_name"
+                android:hint="Enter Account Holder Name"
+                android:background="@drawable/outline"
+                app:backgroundTint="@color/black"
+                android:padding="8dp"
+                android:textColorHint="@color/dark_gray"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+              
+                android:text="Account Number"
+              
+                android:padding="@dimen/space_5"/>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_acc_number"
+                android:hint="Enter Account Number"
+                android:inputType="number"
+                android:padding="8dp"
+                android:textColorHint="@color/dark_gray"
+                android:background="@drawable/outline"
+                app:backgroundTint="@color/black"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="Confirm Account Number"
+
+                android:padding="@dimen/space_5"/>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_conf_acc_number"
+                android:hint="Confirm Account Number"
+                android:inputType="number"
+                android:textColorHint="@color/grey"
+                android:visibility="gone"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+              
+                android:text="IFSC Code"
+              
+                android:padding="@dimen/space_5"/>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_ifsc"
+                android:hint="Enter IFSC Code"
+                android:padding="8dp"
+                android:textColorHint="@color/dark_gray"
+                android:background="@drawable/outline"
+                app:backgroundTint="@color/black"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+              
+                android:text="Bank Name"
+              
+                android:padding="@dimen/space_5"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_bank_name"
+                android:hint="Enter bank name"
+                android:background="@drawable/outline"
+                app:backgroundTint="@color/black"
+                android:padding="8dp"
+                android:textColorHint="@color/dark_gray" />
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cornerRadius="@dimen/space_20"
+                android:background="@drawable/bg_button"
+                android:text="@string/submit"
+                style="@style/headingText"
+                android:textSize="@dimen/space_14"
+                android:textColor="@color/white"
+                android:layout_gravity="end"
+                android:layout_marginVertical="@dimen/space_10"
+                android:id="@+id/btn_submit"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

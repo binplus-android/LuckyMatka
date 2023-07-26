@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Lucky Matka</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_to_neagle_games">Welcome To \nNR OFFICIAL GAMES</string>
+    <string name="confim_your_amount">Confim your amount</string>
+    <string name="wallet_amount">Main Wallet Amount</string>
+    <string name="winnig_wallet_amount">Winnig Wallet Amount</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="enter_mobile_number">Enter Mobile Number</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="login">LOGIN</string>
+    <string name="enter_digit">Enter digit</string>
+    <string name="register">REGISTER</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="sign_UP">Register</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="name">Name</string>
+    <string name="submit">SUBMIT</string>
+    <string name="Proceed"><font ><big>+</big>ADD</font></string>
+    <string name="new_User_register">CREATE NEW ACCOUNT</string>
+    <string name="enter_here">Enter Points</string>
+    <string name="bet_submit">Bet Submit</string>
+
+</resources>

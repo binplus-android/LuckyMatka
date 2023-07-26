@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.StarlineActivity">
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:id="@+id/swipe"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_starlinRate">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/space_10">
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:padding="@dimen/space_5"
+                    android:text="Starline Games"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_5"
+                android:orientation="horizontal">
+
+
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/tv_starhistory"
+                    android:layout_width="0dp"
+                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:textSize="@dimen/space_14"
+                    android:background="@drawable/bg_button"
+                    android:padding="@dimen/space_12"
+                    android:text="Bid History"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/tv_winhistory"
+                    android:layout_width="0dp"
+                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="5dp"
+                    android:textSize="@dimen/space_14"
+                    android:background="@drawable/bg_button"
+                    android:padding="@dimen/space_12"
+                    android:text="Win History"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <TextView
+                android:visibility="visible"
+                android:id="@+id/tv_chart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="@dimen/space_14"
+                android:background="@drawable/bg_button"
+                android:padding="@dimen/space_12"
+                android:text="View Chart"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rec_starline"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:nestedScrollingEnabled="false" />
+    </RelativeLayout>
+</LinearLayout>
+        </ScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/btn_starlinRate"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:text="Starlin game rate"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/space_14" />
+</RelativeLayout>

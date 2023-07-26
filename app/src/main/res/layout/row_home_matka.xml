@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--    card_matka-->
+    <androidx.cardview.widget.CardView
+        android:padding="@dimen/space_6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rel_matka_color"
+        app:cardCornerRadius="@dimen/space_8"
+        android:layout_margin="5dp">
+
+        <LinearLayout
+            android:padding="@dimen/space_3"
+            android:id="@+id/lin_matka"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/space_4"
+                android:layout_marginTop="10dp"
+                android:layout_weight="3"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="@dimen/space_40"
+                        android:layout_height="@dimen/space_40"
+                        android:layout_gravity="top"
+                        android:src="@drawable/ic_calendar"
+                        app:tint="@color/black"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="left"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        style="@style/headingText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="MORNING KUBER"
+                        android:gravity="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="9pt" />
+
+                    <TextView
+                        android:id="@+id/tv_number"
+                        style="@style/headingText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="***"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="9pt" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lin_result"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".3"
+                    android:visibility="gone"
+                    android:gravity="center"
+                    android:layout_marginRight="5dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/space_40"
+                        android:layout_height="@dimen/space_40"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/chart" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="@dimen/space_40"
+                        android:layout_height="@dimen/space_40"
+                        android:layout_gravity="top"
+                        android:src="@drawable/ic_play"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/space_10"
+                android:layout_marginTop="@dimen/space_10"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:overScrollMode="never"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/tv_open"
+                    style="@style/headingText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="left"
+                    android:text="***"
+                    android:textColor="@color/black"
+                    android:textSize="8pt" />
+
+                <TextView
+                    android:id="@+id/tv_close"
+                    style="@style/headingText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="right"
+                    android:text="***"
+                    android:textColor="@color/black"
+                    android:textSize="8pt" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:visibility="gone"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:id="@+id/lin_play"
+                    android:background="@drawable/bg_button"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/iv_play"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_play_circle" />
+
+                    <TextView
+                        android:textAlignment="center"
+                        android:layout_gravity="center"
+                        android:id="@+id/txtPlayPause"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/bg_rect"
+                    android:gravity="center"
+                    android:overScrollMode="never"
+                    android:padding="7dp"
+                    android:text="status"
+                    android:textColor="@color/white"
+                    android:textSize="6pt"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

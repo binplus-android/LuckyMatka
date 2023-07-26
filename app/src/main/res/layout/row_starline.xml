@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/rel_starline"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rel_matka_color"
+        android:background="@drawable/bg_back"
+        android:backgroundTint="@color/black">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:id="@+id/lin_matka"
+
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="10"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/lin_time"
+                        android:weightSum="3"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:overScrollMode="never"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:gravity="center"
+                            android:id="@+id/tv_open"
+                            android:layout_weight="1.5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="***"
+                            android:textSize="10sp"
+                            android:textColor="@color/black"
+
+                            />
+
+                        <TextView
+                            android:gravity="center"
+                            android:id="@+id/tv_close"
+                            android:layout_weight="1.5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="***"
+                            android:textSize="10sp"
+                            android:textColor="@color/black"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="80dp"
+                            android:orientation="vertical">
+                            <TextView
+
+                                android:id="@+id/tv_name"
+                                android:gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:text="MORNING KUBER"
+                                android:layout_marginVertical="@dimen/space_10"
+                                android:textSize="@dimen/space_18"
+                                android:fontFamily="@font/montserratextrabold"
+                                android:textColor="@color/dark_yellow"
+                                />
+
+                            <TextView
+                                android:gravity="center"
+                                android:id="@+id/tv_number"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="***"
+                                android:layout_marginBottom="@dimen/space_10"
+                                android:fontFamily="@font/montserratextrabold"
+                                android:textSize="@dimen/space_18"
+                                android:textColor="@color/light_red"
+                                />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="65dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <ImageView
+                                android:id="@+id/iv_play"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/ic_play_circle"
+                                android:layout_gravity="center"/>
+                            <TextView
+                                android:id="@+id/tv_status"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:paddingHorizontal="5dp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="Running"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/play_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center"
+                        android:backgroundTint="@color/colorPrimaryDark">
+                        <ImageView
+
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/ic_play_circle"
+                            android:padding="5dp"
+                            android:layout_gravity="center_vertical"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="9sp"
+                            android:text="PLAY GAME"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/close_btn"
+                        android:layout_width="105dp"
+                        android:layout_height="35dp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_button"
+                        android:backgroundTint="@color/brown">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="9sp"
+                            android:text="CLOSED"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

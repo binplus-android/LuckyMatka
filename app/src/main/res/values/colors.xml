@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <color name="colorPrimary">#F6B902</color>-->
+    <color name="colorPrimary">#B40103</color>
+
+<!--    <color name="colorPrimaryDark">#BD0606</color>-->
+    <color name="colorPrimaryDark">#B40103</color>
+    <color name="edittextstroke">#B40103</color>
+<!--    <color name="colorPrimaryDark">#F89402</color>-->
+    <color name="colorAccent">#FF000000</color>
+    <color name="coloSecondary">#81E4C8</color>
+    <color name="orange">#FE3C01</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="bg_clr_bid">#FFFFFFFF</color>
+    <color name="white_smoke">#EBE9E9</color>
+    <color name="grey">#7CECE7E7</color>
+    <color name="edittext_hint">#7CECE7E7</color>
+    <color name="darkgrey">#696969</color>
+    <color name="offwhite">#f5f5f5</color>
+    <color name="all">#B2FFFFFF</color>
+    <color name="red">#ff5353</color>
+    <color name="light_red">#ED0909</color>
+    <color name="green">#3B9538</color>
+    <color name="dark_green">#0BD605</color>
+    <color name="light_green">#A7FAA6</color>
+    <color name="light_blue">#ADD8E6</color>
+    <color name="purple">#D62DF3</color>
+    <color name="light_purple">#EEAAFA</color>
+    <color name="dark_blue">#000000</color>
+
+    <color name="yellow">#F6E659</color>
+<!--    <color name="color_new">#0091EA</color>-->
+    <color name="dark_yellow">#FFC400</color>
+    <color name="light_grey">#616772</color>
+    <color name="brown">#D2B48C</color>
+    <color name="dark_gray">#7C838181</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparentBlue">#990189F7</color>
+    <color name="darkBlue">#990535A1</color>
+    <color name="new_wave">#13a89e</color>
+    <color name="low_gray">#F1F1F1</color>
+    <color name="low_blue">#F3F7FA</color>
+    <color name="bg_edittext">#C8DFED</color>
+    <color name="background_color">#9e9e9e</color>
+    <color name="hint_color">#545454</color>
+    <color name="tranparent_grey">#4D9e9e9e</color>
+</resources>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_margin="@dimen/space_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rel_matka_color"
+        android:background="@drawable/bg_back"
+        android:backgroundTint="@color/colorPrimary"
+        >
+    <androidx.cardview.widget.CardView
+
+        app:cardCornerRadius="@dimen/space_5"
+
+        android:layout_margin="@dimen/space_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/space_5"
+                android:weightSum="5"
+                >
+                <ImageView
+                    android:id="@+id/iv_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="55dp"
+                    android:layout_weight=".5"
+                    android:src="@drawable/icons8_close_window_96px"
+                    android:layout_gravity="center_vertical"
+                    />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="4.5"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/bid_id"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        />
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2"
+                        >
+
+
+                        <TextView
+                            android:id="@+id/game_name"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
+                            android:text="name"
+                            android:textSize="@dimen/space_15"
+                            android:textColor="@color/colorPrimaryDark"
+                            />
+                        <TextView
+                            android:text="type"
+                            android:id="@+id/game_type"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
+
+                            android:textSize="14dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/space_5"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2"
+                        >
+                        <TextView
+                            android:text="date"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtDate"
+                            android:padding="@dimen/space_2"
+                            android:textSize="@dimen/space_12"
+                            />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="point"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/points"
+
+                            android:textColor="@color/green"
+                            style="@style/headingText"
+                            android:textSize="15dp"
+
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2"
+                        android:visibility="visible"
+                        >
+
+                        <TextView
+                            android:id="@+id/status"
+                            android:layout_width="match_parent"
+                            android:visibility="gone"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
+                            android:text="Result"
+                            android:gravity="center"
+                            android:textColor="#316D35"
+                            android:textSize="15dp"
+                            />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="digit"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtDigit"
+                        android:padding="@dimen/space_2"
+                        android:textSize="@dimen/space_15"
+                        />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</RelativeLayout>

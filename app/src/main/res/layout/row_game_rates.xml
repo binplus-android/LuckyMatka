@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_margin="5dp"
+        android:background="@drawable/bg_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/elevation">
+
+        <LinearLayout
+                    android:layout_centerInParent="true"
+                    android:id="@+id/lin_name"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+            android:paddingVertical="8dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:gravity="start"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:paddingLeft="10dp"
+                        android:text="Game name"
+                        android:textColor="@color/black"
+                        android:textSize="8pt"
+                        style="headingText"/>
+
+                    <TextView
+                        android:id="@+id/tv_rate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:paddingRight="10dp"
+                        android:text="Rate"
+                        android:textColor="@color/black"
+                        android:textSize="6pt" />
+
+
+                </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

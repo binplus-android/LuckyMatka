@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/lin_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginVertical="2dp"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="@dimen/space_10"
+            android:paddingVertical="8dp">
+
+            <ImageView
+                android:id="@+id/iv_icon"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:src="@drawable/home" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="name"
+                style="@style/headingText"
+                android:textColor="@color/black"
+                android:textSize="8pt" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_main"
+        app:cardBackgroundColor="@color/light_green"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:elevation="@dimen/space_5"
+        android:visibility="gone"
+        android:layout_margin="@dimen/space_6"
+        app:cardCornerRadius="@dimen/space_10"
+        android:layout_height="120dp">
+
+
+        <LinearLayout
+            android:background="@drawable/new_wave"
+            android:id="@+id/lin_wave"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/space_10"
+            android:weightSum="5"
+            >
+            <LinearLayout
+                android:id="@+id/lin_imag"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/dark_yellow"
+                android:background="@drawable/bg_circegradient"
+                android:layout_width="60dp"
+                android:layout_height="60dp">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/logo"
+                    app:tint="@color/black"
+                    android:layout_gravity="center"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

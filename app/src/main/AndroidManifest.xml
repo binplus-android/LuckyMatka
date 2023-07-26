@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="in.games.luckymatkagames">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <queries>
+        <package android:name="com.whatsapp" />
+    </queries>
+
+    <application
+        android:name="in.games.luckymatkagames.AppController"
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_descriptor"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.JollyMatka.Material"
+        android:usesCleartextTraffic="true">
+
+        <activity
+            android:name="in.games.luckymatkagames.Activity.SpMotorActivity"
+            android:theme="@style/Theme.JollyMatka.Material2" />
+        <activity android:name="in.games.luckymatkagames.Activity.StarGameListActivity" />
+        <activity android:name="in.games.luckymatkagames.Activity.NoticeBoardActivity" />
+        <activity android:name="in.games.luckymatkagames.Activity.NotifiactionActivity" />
+        <activity android:name="in.games.luckymatkagames.Activity.SelectChartActivity" />
+        <activity android:name="in.games.luckymatkagames.Activity.MatkanameHistory" />
+        <activity android:name="in.games.luckymatkagames.Activity.ChartActivity" />
+        <activity android:name="in.games.luckymatkagames.Activity.StarlineActivity" />
+        <activity android:name="in.games.luckymatkagames.Activity.StarWinHistory" />
+        <activity android:name="in.games.luckymatkagames.Activity.BankDetailActivity" />
+        <activity android:name="in.games.luckymatkagames.Activity.RequestFundsActivity" />
+        <activity android:name="in.games.luckymatkagames.Activity.ContactUSActivity" />
+        <activity
+            android:name="in.games.luckymatkagames.Activity.AllChartActivity"
+            android:theme="@style/Theme.JollyMatka.Material2" />
+        <activity
+            android:name="in.games.luckymatkagames.Activity.ChartWebViewActivity"
+            android:theme="@style/Theme.JollyMatka.Material2" />
+        <activity
+            android:name="in.games.luckymatkagames.Activity.FullSangamActivity"
+            android:theme="@style/Theme.JollyMatka.Material2" />
+        <activity
+            android:name="in.games.luckymatkagames.Activity.HalfSangamActivity"
+            android:theme="@style/Theme.JollyMatka.Material2" />
+        <activity
+            android:name="in.games.luckymatkagames.Activity.DigitPanaActivity"
+            android:theme="@style/Theme.JollyMatka.Material2" />
+        <activity android:name="in.games.luckymatkagames.Activity.GameRateActivity" />
+        <activity android:name="in.games.luckymatkagames.Activity.GameListActivity" />
+        <activity android:name="in.games.luckymatkagames.Activity.HowtoPlayActivity" />
+        <activity
+            android:name="in.games.luckymatkagames.Activity.MainActivity"
+            android:theme="@style/Theme.JollyMatka.Material2" />
+        <activity android:name="in.games.luckymatkagames.Activity.HistryActivity" />
+        <activity android:name="in.games.luckymatkagames.Activity.UpiDetailsActivity" />
+        <activity android:name="in.games.luckymatkagames.Activity.WithdrawMethodsActivity" />
+        <activity android:name="in.games.luckymatkagames.Activity.WithdrawRequest" />
+        <activity android:name="in.games.luckymatkagames.Activity.withdraw_history" />
+        <activity android:name="in.games.luckymatkagames.Fragment.GpayFragment" />
+        <activity android:name="in.games.luckymatkagames.Fragment.PhonepeFragment" />
+        <activity android:name="in.games.luckymatkagames.Fragment.PaytmFragment" />
+        <activity android:name="in.games.luckymatkagames.Activity.MyProfileActivity" />
+        <activity android:name="in.games.luckymatkagames.Activity.ChangeActivity" />
+        <activity
+            android:name="in.games.luckymatkagames.Activity.ResetPasswordActivity"
+            android:theme="@style/Theme.JollyMatka.Material2" />
+        <activity
+            android:name="in.games.luckymatkagames.Activity.VerifyOtpActivity"
+            android:theme="@style/Theme.JollyMatka.Material2" />
+        <activity android:name="in.games.luckymatkagames.Fragment.WalletFragment" />
+        <activity
+            android:name="in.games.luckymatkagames.Activity.SendOtpActivity"
+            android:theme="@style/Theme.JollyMatka.Material2" />
+        <activity
+            android:name="in.games.luckymatkagames.Activity.RegisterActivity"
+            android:theme="@style/Theme.JollyMatka.Material2" />
+        <activity
+            android:name="in.games.luckymatkagames.Activity.LoginActivity"
+            android:theme="@style/Theme.JollyMatka.Material2" />
+        <activity
+            android:name="in.games.luckymatkagames.Activity.MpinActivity"
+            android:theme="@style/Theme.JollyMatka.Material2" />
+        <activity
+            android:name="in.games.luckymatkagames.Activity.SplashActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.JollyMatka.Material2">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="royalmatka.page.link/royalmatka"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

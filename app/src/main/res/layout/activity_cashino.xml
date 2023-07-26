@@ -1,0 +1,1317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:layout_gravity="center_horizontal"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:background="@color/red"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Activity.CashinoActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:elevation="2dp"
+            android:background="@color/colorPrimary">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/space_5"
+                    android:layout_weight=".4"
+                    android:src="@drawable/ic_baseline_arrow_back_24"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    style="@style/headingText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/space_2"
+                    android:layout_weight="1"
+                    android:text="@string/app_name"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/space_16"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_clear"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:text="Reset"
+                    android:gravity="center"
+                    android:visibility="visible"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+                <TextView
+                    android:id="@+id/tv_history"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/space_2"
+                    android:layout_weight="1"
+                    android:text="Casino History"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/space_14" />
+
+                <LinearLayout
+                    android:id="@+id/lin_watch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_weight=".3"
+
+                    android:gravity="center_vertical"
+
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+
+                        android:layout_width="@dimen/space_30"
+                        android:layout_height="@dimen/space_30"
+                        android:src="@drawable/watch_26px"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        style="@style/headingText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/lin_wallet"
+                        android:paddingLeft="@dimen/space_5"
+                        android:text="0:0:0"
+                        android:textColor="@color/white"
+                        android:textSize="18dp"
+
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lin_wallet"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end|center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/space_30"
+                        android:layout_height="@dimen/space_30"
+                        android:src="@drawable/wallet_32px"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tv_wallet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/lin_wallet"
+                        android:paddingLeft="@dimen/space_5"
+                        android:text="00"
+                        android:textColor="@color/white"
+                        android:textSize="18dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:fillViewport="true"
+        >
+        <RelativeLayout
+            android:id="@+id/rel_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/rel_result"
+                    android:layout_width="400dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:id="@+id/gif_img"
+                        android:layout_width="300dp"
+                        android:layout_height="300dp"
+                        android:layout_centerInParent="true" />
+
+                    <!--        <de.hdodenhof.circleimageview.CircleImageView-->
+                    <!--            android:id="@+id/gif_img"-->
+                    <!--            android:layout_width="200dp"-->
+                    <!--            android:layout_height="200dp"-->
+                    <!--            android:layout_centerInParent="true"-->
+                    <!--            android:background="@drawable/soin_back"-->
+                    <!--            />-->
+
+                    <TextView
+                        android:id="@+id/tv_results"
+                        android:layout_width="300dp"
+                        android:layout_height="300dp"
+                        android:visibility="gone"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="60dp"
+                        tools:ignore="RtlCompat" />
+
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/transparent"
+                    >
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/space_30"
+                        android:layout_marginTop="@dimen/space_12"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/space_5"
+                            android:layout_marginRight="@dimen/space_5"
+                            android:layout_marginLeft="20dp"
+                            android:orientation="vertical">
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="Result"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/space_15"
+                                android:textStyle="bold" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rec_result"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"/>
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rec_myresult"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:visibility="visible"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="150dp"
+                                    android:layout_height="120dp"
+                                    android:layout_marginRight="-55dp"
+                                    android:gravity="center"
+                                    android:rotation="90">
+
+                                    <TextView
+                                        android:id="@+id/num_0"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/pantagon_shape"
+                                        android:backgroundTint="@color/white"
+                                        android:gravity="center"
+
+                                        android:padding="@dimen/space_1"
+                                        android:text="0"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/space_20"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal"
+                                    android:rotation="180">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/tv_1"
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            android:background="@drawable/bg_cahino"
+                                            android:gravity="center"
+                                            android:padding="@dimen/space_2"
+                                            android:rotation="90"
+                                            android:text="2 to 1"
+                                            android:textSize="12sp"
+                                            android:textAlignment="center"
+                                            android:textColor="@color/white" />
+
+                                        <TextView
+                                            android:id="@+id/tv_2"
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            android:background="@drawable/bg_cahino"
+                                            android:gravity="center"
+                                            android:padding="@dimen/space_2"
+                                            android:textSize="12sp"
+                                            android:rotation="90"
+                                            android:text="2 to 1"
+                                            android:textAlignment="center"
+                                            android:textColor="@color/white" />
+
+                                        <TextView
+                                            android:id="@+id/tv_3"
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            android:background="@drawable/bg_cahino"
+                                            android:gravity="center"
+                                            android:padding="@dimen/space_2"
+                                            android:rotation="90"
+                                            android:text="2 to 1"
+                                            android:textSize="12sp"
+                                            android:textAlignment="center"
+                                            android:textColor="@color/white" />
+                                    </LinearLayout>
+
+                                    <androidx.recyclerview.widget.RecyclerView
+                                        android:id="@+id/rec_number"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:rotation="180" />
+
+
+                                    <!--                <LinearLayout-->
+                                    <!--                    android:layout_width="match_parent"-->
+                                    <!--                    android:layout_height="wrap_content"-->
+                                    <!--                    android:orientation="horizontal">-->
+
+                                    <!--                    <TextView-->
+                                    <!--                        android:id="@+id/num_3"-->
+                                    <!--                        android:layout_width="40dp"-->
+                                    <!--                        android:layout_height="40dp"-->
+                                    <!--                        android:layout_gravity="center"-->
+                                    <!--                        android:background="@color/red"-->
+                                    <!--                        android:gravity="center"-->
+                                    <!--                        android:rotation="270"-->
+                                    <!--                        android:text="3"-->
+                                    <!--                        android:textAlignment="center"-->
+                                    <!--                        android:textColor="@color/white" />-->
+
+                                    <!--                    <TextView-->
+                                    <!--                        android:id="@+id/num_6"-->
+                                    <!--                        android:layout_width="40dp"-->
+                                    <!--                        android:layout_height="40dp"-->
+                                    <!--                        android:background="@color/black"-->
+                                    <!--                        android:gravity="center"-->
+                                    <!--                        android:rotation="270"-->
+                                    <!--                        android:text="6"-->
+                                    <!--                        android:textAlignment="center"-->
+                                    <!--                        android:textColor="@color/white" />-->
+
+                                    <!--                    <TextView-->
+                                    <!--                        android:id="@+id/num_9"-->
+                                    <!--                        android:layout_width="40dp"-->
+                                    <!--                        android:layout_height="40dp"-->
+                                    <!--                        android:background="@color/red"-->
+                                    <!--                        android:gravity="center"-->
+                                    <!--                        android:rotation="270"-->
+                                    <!--                        android:text="9"-->
+                                    <!--                        android:textAlignment="center"-->
+                                    <!--                        android:textColor="@color/white" />-->
+
+                                    <!--                    <TextView-->
+                                    <!--                        android:id="@+id/num_12"-->
+                                    <!--                        android:layout_width="40dp"-->
+                                    <!--                        android:layout_height="40dp"-->
+                                    <!--                        android:background="@color/red"-->
+                                    <!--                        android:gravity="center"-->
+                                    <!--                        android:rotation="270"-->
+                                    <!--                        android:text="12"-->
+                                    <!--                        android:textAlignment="center"-->
+                                    <!--                        android:textColor="@color/white" />-->
+
+                                    <!--                    <TextView-->
+                                    <!--                        android:id="@+id/num_15"-->
+                                    <!--                        android:layout_width="40dp"-->
+                                    <!--                        android:layout_height="40dp"-->
+                                    <!--                        android:background="@color/black"-->
+                                    <!--                        android:gravity="center"-->
+                                    <!--                        android:rotation="270"-->
+                                    <!--                        android:text="15"-->
+                                    <!--                        android:textAlignment="center"-->
+                                    <!--                        android:textColor="@color/white" />-->
+
+                                    <!--                    <TextView-->
+                                    <!--                        android:id="@+id/num_18"-->
+                                    <!--                        android:layout_width="40dp"-->
+                                    <!--                        android:layout_height="40dp"-->
+                                    <!--                        android:background="@color/red"-->
+                                    <!--                        android:gravity="center"-->
+                                    <!--                        android:text="18"-->
+                                    <!--                        android:rotation="270"-->
+                                    <!--                        android:textAlignment="center"-->
+                                    <!--                        android:textColor="@color/white" />-->
+
+                                    <!--                    <TextView-->
+                                    <!--                        android:id="@+id/num_21"-->
+                                    <!--                        android:layout_width="40dp"-->
+                                    <!--                        android:layout_height="40dp"-->
+                                    <!--                        android:background="@color/red"-->
+                                    <!--                        android:gravity="center"-->
+                                    <!--                        android:rotation="270"-->
+                                    <!--                        android:text="21"-->
+                                    <!--                        android:textAlignment="center"-->
+                                    <!--                        android:textColor="@color/white" />-->
+
+                                    <!--                    <TextView-->
+                                    <!--                        android:id="@+id/num_24"-->
+                                    <!--                        android:layout_width="40dp"-->
+                                    <!--                        android:layout_height="40dp"-->
+                                    <!--                        android:background="@color/black"-->
+                                    <!--                        android:gravity="center"-->
+                                    <!--                        android:rotation="270"-->
+                                    <!--                        android:text="24"-->
+                                    <!--                        android:textAlignment="center"-->
+                                    <!--                        android:textColor="@color/white" />-->
+
+                                    <!--                    <TextView-->
+                                    <!--                        android:id="@+id/num_27"-->
+                                    <!--                        android:layout_width="40dp"-->
+                                    <!--                        android:layout_height="40dp"-->
+                                    <!--                        android:background="@color/red"-->
+                                    <!--                        android:gravity="center"-->
+                                    <!--                        android:rotation="270"-->
+                                    <!--                        android:text="27"-->
+                                    <!--                        android:textAlignment="center"-->
+                                    <!--                        android:textColor="@color/white" />-->
+
+                                    <!--                    <TextView-->
+                                    <!--                        android:id="@+id/num_30"-->
+                                    <!--                        android:layout_width="40dp"-->
+                                    <!--                        android:layout_height="40dp"-->
+                                    <!--                        android:background="@color/red"-->
+                                    <!--                        android:gravity="center"-->
+                                    <!--                        android:rotation="270"-->
+                                    <!--                        android:text="30"-->
+                                    <!--                        android:textAlignment="center"-->
+                                    <!--                        android:textColor="@color/white" />-->
+
+                                    <!--                    <TextView-->
+                                    <!--                        android:id="@+id/num_33"-->
+                                    <!--                        android:layout_width="40dp"-->
+                                    <!--                        android:layout_height="40dp"-->
+                                    <!--                        android:background="@color/black"-->
+                                    <!--                        android:gravity="center"-->
+                                    <!--                        android:rotation="270"-->
+                                    <!--                        android:text="33"-->
+                                    <!--                        android:textAlignment="center"-->
+                                    <!--                        android:textColor="@color/white" />-->
+
+                                    <!--                    <TextView-->
+                                    <!--                        android:id="@+id/num_36"-->
+                                    <!--                        android:layout_width="40dp"-->
+                                    <!--                        android:layout_height="40dp"-->
+                                    <!--                        android:background="@color/red"-->
+                                    <!--                        android:gravity="center"-->
+                                    <!--                        android:rotation="270"-->
+                                    <!--                        android:text="36"-->
+                                    <!--                        android:textAlignment="center"-->
+                                    <!--                        android:textColor="@color/white" />-->
+
+                                    <!--                    <TextView-->
+                                    <!--                        android:id="@+id/tv_1"-->
+                                    <!--                        android:layout_width="40dp"-->
+                                    <!--                        android:layout_height="40dp"-->
+                                    <!--                        android:background="@drawable/bg_cahino"-->
+                                    <!--                        android:gravity="center"-->
+                                    <!--                        android:rotation="270"-->
+                                    <!--                        android:padding="@dimen/space_2"-->
+                                    <!--                        android:text="2 to 1"-->
+
+
+                                    <!--                        android:textAlignment="center"-->
+                                    <!--                        android:textColor="@color/white" />-->
+                                    <!--                </LinearLayout>-->
+                                    <!--                <LinearLayout-->
+                                    <!--                    android:layout_width="match_parent"-->
+                                    <!--                    android:layout_height="wrap_content"-->
+                                    <!--                    android:orientation="horizontal">-->
+
+
+                                    <!--                    <TextView-->
+                                    <!--                        android:id="@+id/num_2"-->
+                                    <!--                        android:layout_width="40dp"-->
+                                    <!--                        android:layout_height="40dp"-->
+                                    <!--                        android:layout_gravity="center"-->
+                                    <!--                        android:background="@color/black"-->
+                                    <!--                        android:gravity="center"-->
+                                    <!--                        android:rotation="270"-->
+                                    <!--                        android:text="2"-->
+                                    <!--                        android:textAlignment="center"-->
+                                    <!--                        android:textColor="@color/white" />-->
+
+                                    <!--                    <TextView-->
+                                    <!--                        android:id="@+id/num_5"-->
+                                    <!--                        android:layout_width="40dp"-->
+                                    <!--                        android:layout_height="40dp"-->
+                                    <!--                        android:background="@color/red"-->
+                                    <!--                        android:gravity="center"-->
+                                    <!--                        android:rotation="270"-->
+                                    <!--                        android:text="5"-->
+                                    <!--                        android:textAlignment="center"-->
+                                    <!--                        android:textColor="@color/white" />-->
+
+                                    <!--                    <TextView-->
+                                    <!--                        android:id="@+id/num_8"-->
+                                    <!--                        android:layout_width="40dp"-->
+                                    <!--                        android:layout_height="40dp"-->
+                                    <!--                        android:background="@color/black"-->
+                                    <!--                        android:gravity="center"-->
+                                    <!--                        android:rotation="270"-->
+                                    <!--                        android:text="8"-->
+                                    <!--                        android:textAlignment="center"-->
+                                    <!--                        android:textColor="@color/white" />-->
+
+                                    <!--                    <TextView-->
+                                    <!--                        android:id="@+id/num_11"-->
+                                    <!--                        android:layout_width="40dp"-->
+                                    <!--                        android:layout_height="40dp"-->
+                                    <!--                        android:background="@color/black"-->
+                                    <!--                        android:gravity="center"-->
+                                    <!--                        android:rotation="270"-->
+                                    <!--                        android:text="11"-->
+                                    <!--                        android:textAlignment="center"-->
+                                    <!--                        android:textColor="@color/white" />-->
+
+                                    <!--                    <TextView-->
+                                    <!--                        android:id="@+id/num_14"-->
+                                    <!--                        android:layout_width="40dp"-->
+                                    <!--                        android:layout_height="40dp"-->
+                                    <!--                        android:background="@color/red"-->
+                                    <!--                        android:gravity="center"-->
+                                    <!--                        android:rotation="270"-->
+                                    <!--                        android:text="14"-->
+                                    <!--                        android:textAlignment="center"-->
+                                    <!--                        android:textColor="@color/white" />-->
+
+                                    <!--                    <TextView-->
+                                    <!--                        android:id="@+id/num_17"-->
+                                    <!--                        android:rotation="270"-->
+                                    <!--                        android:layout_width="40dp"-->
+                                    <!--                        android:layout_height="40dp"-->
+                                    <!--                        android:background="@color/black"-->
+                                    <!--                        android:gravity="center"-->
+                                    <!--                        android:text="17"-->
+                                    <!--                        android:textAlignment="center"-->
+                                    <!--                        android:textColor="@color/white" />-->
+
+                                    <!--                    <TextView-->
+                                    <!--                        android:id="@+id/num_20"-->
+                                    <!--                        android:rotation="270"-->
+                                    <!--                        android:layout_width="40dp"-->
+                                    <!--                        android:layout_height="40dp"-->
+                                    <!--                        android:background="@color/black"-->
+                                    <!--                        android:gravity="center"-->
+                                    <!--                        android:text="20"-->
+                                    <!--                        android:textAlignment="center"-->
+                                    <!--                        android:textColor="@color/white" />-->
+
+                                    <!--                    <TextView-->
+                                    <!--                        android:id="@+id/num_23"-->
+                                    <!--                        android:rotation="270"-->
+                                    <!--                        android:layout_width="40dp"-->
+                                    <!--                        android:layout_height="40dp"-->
+                                    <!--                        android:background="@color/red"-->
+                                    <!--                        android:gravity="center"-->
+                                    <!--                        android:text="23"-->
+                                    <!--                        android:textAlignment="center"-->
+                                    <!--                        android:textColor="@color/white" />-->
+
+                                    <!--                    <TextView-->
+                                    <!--                        android:id="@+id/num_26"-->
+                                    <!--                        android:rotation="270"-->
+                                    <!--                        android:layout_width="40dp"-->
+                                    <!--                        android:layout_height="40dp"-->
+                                    <!--                        android:background="@color/black"-->
+                                    <!--                        android:gravity="center"-->
+                                    <!--                        android:text="26"-->
+                                    <!--                        android:textAlignment="center"-->
+                                    <!--                        android:textColor="@color/white" />-->
+
+                                    <!--                    <TextView-->
+                                    <!--                        android:id="@+id/num_29"-->
+                                    <!--                        android:rotation="270"-->
+                                    <!--                        android:layout_width="40dp"-->
+                                    <!--                        android:layout_height="40dp"-->
+                                    <!--                        android:background="@color/black"-->
+                                    <!--                        android:gravity="center"-->
+                                    <!--                        android:text="29"-->
+                                    <!--                        android:textAlignment="center"-->
+                                    <!--                        android:textColor="@color/white" />-->
+
+                                    <!--                    <TextView-->
+                                    <!--                        android:id="@+id/num_32"-->
+                                    <!--                        android:rotation="270"-->
+                                    <!--                        android:layout_width="40dp"-->
+                                    <!--                        android:layout_height="40dp"-->
+                                    <!--                        android:background="@color/red"-->
+                                    <!--                        android:gravity="center"-->
+                                    <!--                        android:text="32"-->
+                                    <!--                        android:textAlignment="center"-->
+                                    <!--                        android:textColor="@color/white" />-->
+
+                                    <!--                    <TextView-->
+                                    <!--                        android:id="@+id/num_35"-->
+                                    <!--                        android:rotation="270"-->
+                                    <!--                        android:layout_width="40dp"-->
+                                    <!--                        android:layout_height="40dp"-->
+                                    <!--                        android:background="@color/black"-->
+                                    <!--                        android:gravity="center"-->
+                                    <!--                        android:text="35"-->
+                                    <!--                        android:textAlignment="center"-->
+                                    <!--                        android:textColor="@color/white" />-->
+
+                                    <!--                    <TextView-->
+                                    <!--                        android:id="@+id/tv_2"-->
+                                    <!--                        android:rotation="270"-->
+                                    <!--                        android:layout_width="40dp"-->
+                                    <!--                        android:layout_height="40dp"-->
+                                    <!--                        android:background="@drawable/bg_cahino"-->
+                                    <!--                        android:gravity="center"-->
+                                    <!--                        android:text="2 to 1"-->
+                                    <!--                        android:padding="@dimen/space_2"-->
+                                    <!--                        android:textAlignment="center"-->
+                                    <!--                        android:textColor="@color/white" />-->
+                                    <!--                </LinearLayout>-->
+
+                                    <!--                <LinearLayout-->
+                                    <!--                    android:layout_width="match_parent"-->
+                                    <!--                    android:layout_height="wrap_content"-->
+                                    <!--                    android:orientation="horizontal">-->
+
+                                    <!--                    <TextView-->
+                                    <!--                        android:id="@+id/num_1"-->
+                                    <!--                        android:rotation="270"-->
+                                    <!--                        android:layout_width="40dp"-->
+                                    <!--                        android:layout_height="40dp"-->
+                                    <!--                        android:layout_gravity="center"-->
+                                    <!--                        android:background="@color/red"-->
+                                    <!--                        android:gravity="center"-->
+                                    <!--                        android:text="1"-->
+                                    <!--                        android:textAlignment="center"-->
+                                    <!--                        android:textColor="@color/white" />-->
+
+                                    <!--                    <TextView-->
+                                    <!--                        android:id="@+id/num_4"-->
+                                    <!--                        android:rotation="270"-->
+                                    <!--                        android:layout_width="40dp"-->
+                                    <!--                        android:layout_height="40dp"-->
+                                    <!--                        android:background="@color/black"-->
+                                    <!--                        android:gravity="center"-->
+                                    <!--                        android:text="4"-->
+                                    <!--                        android:textAlignment="center"-->
+                                    <!--                        android:textColor="@color/white" />-->
+
+                                    <!--                    <TextView-->
+                                    <!--                        android:id="@+id/num_7"-->
+                                    <!--                        android:rotation="270"-->
+                                    <!--                        android:layout_width="40dp"-->
+                                    <!--                        android:layout_height="40dp"-->
+                                    <!--                        android:background="@color/red"-->
+                                    <!--                        android:gravity="center"-->
+                                    <!--                        android:text="7"-->
+                                    <!--                        android:textAlignment="center"-->
+                                    <!--                        android:textColor="@color/white" />-->
+
+                                    <!--                    <TextView-->
+                                    <!--                        android:id="@+id/num_10"-->
+                                    <!--                        android:rotation="270"-->
+                                    <!--                        android:layout_width="40dp"-->
+                                    <!--                        android:layout_height="40dp"-->
+                                    <!--                        android:background="@color/black"-->
+                                    <!--                        android:gravity="center"-->
+                                    <!--                        android:text="10"-->
+                                    <!--                        android:textAlignment="center"-->
+                                    <!--                        android:textColor="@color/white" />-->
+
+                                    <!--                    <TextView-->
+                                    <!--                        android:id="@+id/num_13"-->
+                                    <!--                        android:rotation="270"-->
+                                    <!--                        android:layout_width="40dp"-->
+                                    <!--                        android:layout_height="40dp"-->
+                                    <!--                        android:background="@color/black"-->
+                                    <!--                        android:gravity="center"-->
+                                    <!--                        android:text="13"-->
+                                    <!--                        android:textAlignment="center"-->
+                                    <!--                        android:textColor="@color/white" />-->
+
+                                    <!--                    <TextView-->
+                                    <!--                        android:id="@+id/num_16"-->
+                                    <!--                        android:rotation="270"-->
+                                    <!--                        android:layout_width="40dp"-->
+                                    <!--                        android:layout_height="40dp"-->
+                                    <!--                        android:background="@color/red"-->
+                                    <!--                        android:gravity="center"-->
+                                    <!--                        android:text="16"-->
+                                    <!--                        android:textAlignment="center"-->
+                                    <!--                        android:textColor="@color/white" />-->
+
+                                    <!--                    <TextView-->
+                                    <!--                        android:id="@+id/num_19"-->
+                                    <!--                        android:rotation="270"-->
+                                    <!--                        android:layout_width="40dp"-->
+                                    <!--                        android:layout_height="40dp"-->
+                                    <!--                        android:background="@color/red"-->
+                                    <!--                        android:gravity="center"-->
+                                    <!--                        android:text="19"-->
+                                    <!--                        android:textAlignment="center"-->
+                                    <!--                        android:textColor="@color/white" />-->
+
+                                    <!--                    <TextView-->
+                                    <!--                        android:id="@+id/num_22"-->
+                                    <!--                        android:rotation="270"-->
+
+                                    <!--                        android:layout_width="40dp"-->
+
+                                    <!--                        android:layout_height="40dp"-->
+                                    <!--                        android:background="@color/black"-->
+                                    <!--                        android:gravity="center"-->
+                                    <!--                        android:text="22"-->
+                                    <!--                        android:textAlignment="center"-->
+                                    <!--                        android:textColor="@color/white" />-->
+
+                                    <!--                    <TextView-->
+                                    <!--                        android:id="@+id/num_25"-->
+                                    <!--                        android:rotation="270"-->
+
+                                    <!--                        android:layout_width="40dp"-->
+                                    <!--                        android:layout_height="40dp"-->
+                                    <!--                        android:background="@color/red"-->
+                                    <!--                        android:gravity="center"-->
+                                    <!--                        android:text="25"-->
+                                    <!--                        android:textAlignment="center"-->
+                                    <!--                        android:textColor="@color/white" />-->
+
+                                    <!--                    <TextView-->
+                                    <!--                        android:id="@+id/num_28"-->
+                                    <!--                        android:rotation="270"-->
+
+                                    <!--                        android:layout_width="40dp"-->
+                                    <!--                        android:layout_height="40dp"-->
+                                    <!--                        android:background="@color/black"-->
+                                    <!--                        android:gravity="center"-->
+                                    <!--                        android:text="28"-->
+                                    <!--                        android:textAlignment="center"-->
+                                    <!--                        android:textColor="@color/white" />-->
+
+                                    <!--                    <TextView-->
+                                    <!--                        android:id="@+id/num_31"-->
+                                    <!--                        android:rotation="270"-->
+
+                                    <!--                        android:layout_width="40dp"-->
+                                    <!--                        android:layout_height="40dp"-->
+                                    <!--                        android:background="@color/black"-->
+                                    <!--                        android:gravity="center"-->
+                                    <!--                        android:text="31"-->
+                                    <!--                        android:textAlignment="center"-->
+                                    <!--                        android:textColor="@color/white" />-->
+
+                                    <!--                    <TextView-->
+                                    <!--                        android:id="@+id/num_34"-->
+                                    <!--                        android:rotation="270"-->
+                                    <!--                        android:layout_width="40dp"-->
+                                    <!--                        android:layout_height="40dp"-->
+                                    <!--                        android:background="@color/red"-->
+                                    <!--                        android:gravity="center"-->
+                                    <!--                        android:text="34"-->
+                                    <!--                        android:textAlignment="center"-->
+                                    <!--                        android:textColor="@color/white" />-->
+
+                                    <!--                    <TextView-->
+                                    <!--                        android:id="@+id/tv_3"-->
+                                    <!--                        android:rotation="270"-->
+                                    <!--                        android:layout_width="40dp"-->
+                                    <!--                        android:layout_height="40dp"-->
+                                    <!--                        android:background="@drawable/bg_cahino"-->
+                                    <!--                        android:gravity="center"-->
+                                    <!--                        android:text="2 to 1"-->
+                                    <!--                        android:padding="@dimen/space_2"-->
+                                    <!--                        android:textAlignment="center"-->
+                                    <!--                        android:textColor="@color/white" />-->
+                                    <!--                </LinearLayout>-->
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="27.2dp"
+                                android:layout_marginTop=".5dp"
+                                android:layout_marginBottom=".5dp"
+                                android:background="@color/red"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="149dp"
+                                    android:layout_height="60dp"
+                                    android:background="@drawable/bg_cahino"
+                                    android:gravity="center">
+
+                                    <TextView
+                                        android:id="@+id/tv_1st"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="@dimen/space_12"
+                                        android:background="@drawable/bg_cahino"
+                                        android:padding="@dimen/space_8"
+                                        android:text="1st 12"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/white"
+                                        android:textSize="13sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="149dp"
+                                    android:layout_height="60dp"
+
+                                    android:background="@drawable/bg_cahino"
+                                    android:gravity="center">
+
+                                    <TextView
+                                        android:id="@+id/tv_2nd"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="@dimen/space_12"
+                                        android:background="@drawable/bg_cahino"
+                                        android:padding="@dimen/space_8"
+                                        android:text="2nd 12"
+                                        android:textSize="13sp"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/white"
+                                        />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="149dp"
+                                    android:layout_height="60dp"
+
+                                    android:background="@drawable/bg_cahino"
+                                    android:gravity="center">
+
+                                    <TextView
+                                        android:id="@+id/tv_3rd"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="@dimen/space_12"
+                                        android:background="@drawable/bg_cahino"
+                                        android:padding="@dimen/space_8"
+                                        android:text="3rd 12"
+                                        android:textSize="13sp"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/white"
+                                        />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="26.8dp"
+                                android:layout_marginTop=".5dp"
+                                android:layout_marginBottom=".5dp"
+                                android:background="@color/red"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="149dp"
+                                    android:layout_height="50dp"
+
+                                    android:background="@drawable/bg_cahino"
+
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:id="@+id/tv_1to18"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="1"
+                                        android:text="1 to 18"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/white"
+                                        android:textSize="13sp" />
+
+                                    <View
+                                        android:layout_width="1dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/white" />
+
+                                    <TextView
+                                        android:id="@+id/tv_even"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="1"
+                                        android:text="EVEN"
+                                        android:textSize="13sp"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/white"
+                                        />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="149dp"
+                                    android:layout_height="50dp"
+
+
+                                    android:background="@drawable/bg_cahino"
+
+                                    android:weightSum="2">
+
+                                    <ImageView
+                                        android:id="@+id/iv_red"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="1"
+                                        android:padding="@dimen/space_2"
+                                        android:rotation="90"
+                                        android:src="@drawable/red_diamond"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/space_15"
+                                        android:textStyle="bold" />
+
+                                    <View
+                                        android:layout_width="1dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/white" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_black"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="1"
+                                        android:padding="2dp"
+                                        android:rotation="90"
+                                        android:src="@drawable/black_diamond"
+                                        android:text="EVEN"
+                                        android:textAlignment="center"
+                                        android:textSize="@dimen/space_15" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="149dp"
+                                    android:layout_height="50dp"
+
+
+                                    android:background="@drawable/bg_cahino"
+
+                                    android:weightSum="2">
+
+                                    <TextView
+                                        android:id="@+id/tv_odd"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="1"
+                                        android:text="ODD"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/white"
+                                        android:textSize="13sp"
+                                        />
+
+                                    <View
+                                        android:layout_width="1dp"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/white" />
+
+                                    <TextView
+                                        android:id="@+id/tv_19to36"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="1"
+                                        android:text="19 to 36"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/white"
+                                        android:textSize="13sp" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4">
+
+
+                            <TextView
+                                android:id="@+id/tv_total"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight=".5"
+                                android:text="Total: "
+                                android:textAlignment="viewEnd"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/space_12"
+                                android:visibility="visible"
+                                tools:ignore="RtlCompat" />
+
+                            <TextView
+                                android:id="@+id/tv_gameid"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight=".5"
+                                android:text="00"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/space_12"
+                                android:visibility="visible" />
+
+                            <LinearLayout
+
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1.9"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rec_coin"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                </androidx.recyclerview.widget.RecyclerView>
+                                <!--                    <RelativeLayout-->
+                                <!--                        android:id="@+id/rl_1"-->
+                                <!--                        android:layout_width="wrap_content"-->
+                                <!--                        android:layout_height="wrap_content"-->
+                                <!--                        android:layout_gravity="center"-->
+
+                                <!--                        android:gravity="center">-->
+
+                                <!--                        <ImageView-->
+                                <!--                            android:layout_width="40dp"-->
+
+                                <!--                            android:layout_height="40dp"-->
+                                <!--                            android:src="@drawable/cashinocoin" />-->
+
+                                <!--                        <TextView-->
+                                <!--                            android:layout_width="wrap_content"-->
+                                <!--                            android:layout_height="wrap_content"-->
+                                <!--                            android:layout_centerInParent="true"-->
+                                <!--                            android:text="1"-->
+                                <!--                            android:textAlignment="center"-->
+                                <!--                            android:textColor="@color/white" />-->
+                                <!--                    </RelativeLayout>-->
+
+                                <!--                    <RelativeLayout-->
+                                <!--                        android:id="@+id/rl_10"-->
+                                <!--                        android:layout_width="wrap_content"-->
+                                <!--                        android:layout_height="wrap_content"-->
+                                <!--                        android:gravity="center">-->
+
+
+                                <!--                        <ImageView-->
+                                <!--                            android:layout_width="40dp"-->
+
+                                <!--                            android:layout_height="40dp"-->
+                                <!--                            android:src="@drawable/cashinocoin" />-->
+
+                                <!--                        <TextView-->
+                                <!--                            android:layout_width="wrap_content"-->
+                                <!--                            android:layout_height="wrap_content"-->
+
+                                <!--                            android:layout_centerInParent="true"-->
+                                <!--                            android:gravity="center"-->
+                                <!--                            android:text="10"-->
+                                <!--                            android:textAlignment="center"-->
+                                <!--                            android:textColor="@color/white" />-->
+                                <!--                    </RelativeLayout>-->
+
+                                <!--                    <RelativeLayout-->
+                                <!--                        android:id="@+id/rl_25"-->
+                                <!--                        android:layout_width="wrap_content"-->
+                                <!--                        android:layout_height="wrap_content"-->
+                                <!--                        android:gravity="center">-->
+
+                                <!--                        <ImageView-->
+                                <!--                            android:layout_width="40dp"-->
+
+                                <!--                            android:layout_height="40dp"-->
+                                <!--                            android:src="@drawable/cashinocoin" />-->
+
+                                <!--                        <TextView-->
+                                <!--                            android:layout_width="wrap_content"-->
+                                <!--                            android:layout_height="wrap_content"-->
+                                <!--                            android:layout_centerInParent="true"-->
+                                <!--                            android:gravity="center"-->
+                                <!--                            android:text="25"-->
+
+                                <!--                            android:textAlignment="center"-->
+                                <!--                            android:textColor="@color/white" />-->
+                                <!--                    </RelativeLayout>-->
+
+                                <!--                    <RelativeLayout-->
+                                <!--                        android:id="@+id/rl_50"-->
+                                <!--                        android:layout_width="wrap_content"-->
+                                <!--                        android:layout_height="wrap_content"-->
+                                <!--                        android:gravity="center">-->
+
+                                <!--                        <ImageView-->
+                                <!--                            android:layout_width="40dp"-->
+
+                                <!--                            android:layout_height="40dp"-->
+                                <!--                            android:src="@drawable/cashinocoin" />-->
+
+                                <!--                        <TextView-->
+                                <!--                            android:layout_width="wrap_content"-->
+                                <!--                            android:layout_height="wrap_content"-->
+                                <!--                            android:layout_centerInParent="true"-->
+                                <!--                            android:gravity="center"-->
+                                <!--                            android:text="50"-->
+
+                                <!--                            android:textAlignment="center"-->
+                                <!--                            android:textColor="@color/white" />-->
+                                <!--                    </RelativeLayout>-->
+
+                                <!--                    <RelativeLayout-->
+                                <!--                        android:id="@+id/rl_100"-->
+                                <!--                        android:layout_width="wrap_content"-->
+                                <!--                        android:layout_height="wrap_content"-->
+                                <!--                        android:gravity="center">-->
+
+                                <!--                        <ImageView-->
+                                <!--                            android:layout_width="40dp"-->
+
+                                <!--                            android:layout_height="40dp"-->
+                                <!--                            android:src="@drawable/cashinocoin" />-->
+
+                                <!--                        <TextView-->
+                                <!--                            android:layout_width="wrap_content"-->
+                                <!--                            android:layout_height="wrap_content"-->
+                                <!--                            android:layout_centerInParent="true"-->
+
+                                <!--                            android:gravity="center"-->
+                                <!--                            android:text="100"-->
+                                <!--                            android:textAlignment="center"-->
+                                <!--                            android:textColor="@color/white"-->
+                                <!--                            android:textSize="@dimen/space_14" />-->
+                                <!--                    </RelativeLayout>-->
+
+                                <!--                    <RelativeLayout-->
+                                <!--                        android:id="@+id/rl_500"-->
+                                <!--                        android:layout_width="wrap_content"-->
+                                <!--                        android:layout_height="wrap_content"-->
+                                <!--                        android:gravity="center">-->
+
+                                <!--                        <ImageView-->
+                                <!--                            android:layout_width="40dp"-->
+
+                                <!--                            android:layout_height="40dp"-->
+                                <!--                            android:src="@drawable/cashinocoin" />-->
+
+                                <!--                        <TextView-->
+                                <!--                            android:layout_width="wrap_content"-->
+                                <!--                            android:layout_height="wrap_content"-->
+                                <!--                            android:layout_centerInParent="true"-->
+                                <!--                            android:gravity="center"-->
+                                <!--                            android:text="500"-->
+                                <!--                            android:textAlignment="center"-->
+                                <!--                            android:textColor="@color/white"-->
+                                <!--                            android:textSize="@dimen/space_12" />-->
+                                <!--                    </RelativeLayout>-->
+
+                                <!--                    <RelativeLayout-->
+                                <!--                        android:id="@+id/rl_1000"-->
+                                <!--                        android:layout_width="wrap_content"-->
+                                <!--                        android:layout_height="wrap_content"-->
+                                <!--                        android:gravity="center">-->
+
+                                <!--                        <ImageView-->
+                                <!--                            android:layout_width="40dp"-->
+
+                                <!--                            android:layout_height="40dp"-->
+                                <!--                            android:src="@drawable/cashinocoin" />-->
+
+                                <!--                        <TextView-->
+                                <!--                            android:layout_width="wrap_content"-->
+                                <!--                            android:layout_height="wrap_content"-->
+                                <!--                            android:layout_centerInParent="true"-->
+                                <!--                            android:gravity="center"-->
+                                <!--                            android:text="1000"-->
+                                <!--                            android:textAlignment="center"-->
+                                <!--                            android:textColor="@color/white"-->
+                                <!--                            android:textSize="@dimen/space_10" />-->
+                                <!--                    </RelativeLayout>-->
+
+                            </LinearLayout>
+
+                            <Button
+                                android:id="@+id/btn_add"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".5"
+                                android:background="@drawable/bg_button"
+                                android:backgroundTint="@color/white"
+                                android:text="Add"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/space_13"
+                                android:visibility="gone" />
+                            <!--                <Button-->
+                            <!--                    android:id="@+id/btn_submit"-->
+                            <!--                    android:layout_width="0dp"-->
+                            <!--                    android:layout_height="wrap_content"-->
+                            <!--                    android:layout_marginLeft="@dimen/space_2"-->
+                            <!--                    android:layout_weight="1"-->
+                            <!--                    android:background="@drawable/bg_button"-->
+                            <!--                    android:backgroundTint="@color/white"-->
+                            <!--                    android:text="Submit"-->
+                            <!--                    android:textColor="@color/colorPrimary"-->
+                            <!--                    android:textSize="@dimen/space_13"-->
+                            <!--                    android:visibility="gone" />-->
+
+                            <TextView
+                                android:id="@+id/tv_viewList"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/space_20"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/space_8"
+                                android:layout_weight=".8"
+                                android:gravity="center"
+                                android:text="View Bid List"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/tv_spin"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/space_20"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/space_8"
+                                android:layout_weight="1.1"
+                                android:gravity="center"
+                                android:text="View Bid List"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/rel_hide"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparentBlue"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rel_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#B7B6B0B0"
+                android:visibility="gone" />
+            <!--    <RelativeLayout-->
+            <!--        android:id="@+id/rel_result"-->
+            <!--        android:layout_width="match_parent"-->
+            <!--        android:layout_height="match_parent"-->
+            <!--        -->
+            <!--        android:visibility="gone" >-->
+
+            <!--        <de.hdodenhof.circleimageview.CircleImageView-->
+            <!--            android:layout_width="200dp"-->
+            <!--            android:layout_height="200dp"-->
+            <!--            android:layout_centerInParent="true"-->
+            <!--            android:background="@drawable/circle"-->
+            <!--            android:backgroundTint="@color/colorPrimaryDark" />-->
+            <!--        <TextView-->
+            <!--            android:id="@+id/tv_results"-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:text="0"-->
+            <!--            android:textAlignment="center"-->
+
+            <!--            android:textSize="80dp"-->
+            <!--            android:layout_centerInParent="true"-->
+            <!--            android:textColor="@color/white"-->
+            <!--            android:layout_height="wrap_content"/>-->
+
+
+            <!--    </RelativeLayout>-->
+        </RelativeLayout>
+
+
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimaryDark"
+
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:background="@color/colorPrimaryDark"
+        android:id="@+id/liner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:padding="@dimen/space_10">
+
+        <ImageView
+            android:id="@+id/iv_cancle"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:padding="4dp"
+            app:srcCompat="@drawable/close" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/confim_your_amount"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <RadioGroup
+                    android:id="@+id/rg_wallet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:id="@+id/rb_wallet_amount"
+                        android:text="@string/wallet_amount"
+                        style="@style/mycheckbox"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <RadioButton
+                        style="@style/mycheckbox"
+                        android:id="@+id/rb_winning_wallet"
+                        android:textColor="@color/colorPrimary"
+                        android:text="@string/winnig_wallet_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </RadioGroup>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_margin="@dimen/space_10"
+                    android:layout_weight="2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lin_wallet"
+                    android:layout_gravity="center|end"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    >
+                    <ImageView
+                        android:layout_width="@dimen/space_30"
+                        android:layout_height="@dimen/space_30"
+                        android:src="@drawable/icons8_wallet"/>
+
+                    <TextView
+                        android:id="@+id/tv_wallet"
+                        style="@style/headingText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/lin_wallet"
+
+                        android:paddingLeft="@dimen/space_5"
+                        android:text="0"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_margin="@dimen/space_10"
+                    android:layout_weight="2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lin_wallet_winning"
+                    android:layout_gravity="center|end"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    >
+                    <ImageView
+                        android:layout_width="@dimen/space_30"
+                        android:layout_height="@dimen/space_30"
+                        app:tint="@color/black"
+                        android:src="@drawable/wallet_winning"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_toLeftOf="@+id/lin_wallet"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_wallet_winning"
+                        android:paddingLeft="@dimen/space_5"
+
+                        android:textSize="18dp"
+                        style="@style/headingText"
+                        android:text="0"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+<!--<LinearLayout-->
+<!--    android:visibility="gone"-->
+<!--    android:orientation="vertical"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content">-->
+<!--    <LinearLayout-->
+<!--        android:id="@+id/lnr_amount"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:padding="2dp"-->
+<!--        android:weightSum="4">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_weight="2"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/lin_wallet"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:orientation="horizontal"-->
+<!--            >-->
+<!--            <ImageView-->
+<!--                android:layout_width="@dimen/space_30"-->
+<!--                android:layout_height="@dimen/space_30"-->
+<!--                app:tint="@color/black"-->
+<!--                android:src="@drawable/icons8_wallet"/>-->
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_toLeftOf="@+id/lin_wallet"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/tv_wallet"-->
+<!--                android:paddingLeft="@dimen/space_5"-->
+
+<!--                android:textSize="18dp"-->
+<!--                style="@style/headingText"-->
+<!--                android:text="0"-->
+<!--                android:textStyle="bold"/>-->
+<!--        </LinearLayout>-->
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_amount"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="2"-->
+<!--            android:gravity="end"-->
+<!--            android:text="@string/wallet_amount"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="16sp"-->
+<!--            tools:ignore="Suspicious0dp" />-->
+
+<!--    </LinearLayout>-->
+<!--    <LinearLayout-->
+<!--        android:layout_marginTop="@dimen/space_20"-->
+
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:padding="2dp"-->
+<!--        android:weightSum="4">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_weight="2"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/lin_wallet_winning"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:orientation="horizontal"-->
+<!--            >-->
+<!--            <ImageView-->
+<!--                android:layout_width="@dimen/space_30"-->
+<!--                android:layout_height="@dimen/space_30"-->
+<!--                app:tint="@color/black"-->
+<!--                android:src="@drawable/wallet_winning"/>-->
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_toLeftOf="@+id/lin_wallet"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/tv_wallet_winning"-->
+<!--                android:paddingLeft="@dimen/space_5"-->
+
+<!--                android:textSize="18dp"-->
+<!--                style="@style/headingText"-->
+<!--                android:text="0"-->
+<!--                android:textStyle="bold"/>-->
+<!--        </LinearLayout>-->
+
+
+<!--        <TextView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="2"-->
+<!--            android:text="@string/winnig_wallet_amount"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="16sp"-->
+<!--            tools:ignore="Suspicious0dp" />-->
+
+<!--    </LinearLayout>-->
+<!--    -->
+<!--</LinearLayout>-->
+
+
+        <ImageView
+            android:layout_marginTop="@dimen/space_10"
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layerType="software"
+            android:src="@drawable/dotted" />
+
+
+        <Button
+            android:id="@+id/btn_dailoge_proceed"
+            android:layout_width="128dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="36dp"
+            android:gravity="center"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textColor="#fff" />
+
+
+    </LinearLayout>
+</RelativeLayout>

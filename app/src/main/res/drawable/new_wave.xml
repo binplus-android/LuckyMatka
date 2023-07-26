@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+<!--        <item>-->
+<!--                <shape android:shape="rectangle">-->
+<!--                        <padding android:top="35dp"/>-->
+<!--                        <size android:width="200dp"-->
+<!--                                android:height="40dp" />-->
+<!--                        <solid android:color="#13a89e" />-->
+<!--                </shape>-->
+<!--        </item>-->
+
+        <!-- This rectangle for the left side -->
+        <item
+                android:right="200dp"
+                android:left="-200dp"
+                android:top="-200dp"
+                android:bottom="-200dp">
+                <rotate android:fromDegrees="-45">
+                        <shape android:shape="rectangle">
+                                <padding android:top="-35dp"/>
+                                <solid android:color="@color/new_wave" />
+                        </shape>
+                </rotate>
+        </item>
+</layer-list>

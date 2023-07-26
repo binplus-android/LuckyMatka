@@ -1,0 +1,176 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.JollyMatka.Material" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="titleTextColor">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textViewStyle">@style/descText</item>
+        <item name="android:fontFamily">@font/mons</item>
+        <item name="ratingBarStyle">@style/MyRatingBar</item>
+        <item name="alertDialogTheme">@style/AlertDialog</item>
+        <item name="checkboxStyle">@style/mycheckbox</item>
+        <item name="textInputStyle">@style/MyHintStyle</item>
+        <item name="buttonStyle">@style/button</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
+        <item name="bottomSheetDialogTheme">@style/MyTransparentBottomSheetDialogTheme</item>
+    </style>
+
+    <style name="MyTransparentBottomSheetDialogTheme">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="editText" parent="Widget.AppCompat.EditText">
+        <item name="android:textSize">@dimen/tv_14sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:background">@drawable/bg_button</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:paddingLeft">@dimen/space_10</item>
+        <item name="android:paddingRight">@dimen/space_10</item>
+        <item name="android:layout_marginLeft">@dimen/editTextHoriMargin</item>
+        <item name="android:layout_marginRight">@dimen/editTextHoriMargin</item>
+        <item name="elevation">@dimen/elevation</item>
+    </style>
+
+    <style name="counterText">
+        <item name="android:textColor">@color/grey</item>
+    </style>
+
+    <style name="MyButtonStyle"
+        parent="Widget.MaterialComponents.Button">
+        <item name="materialThemeOverlay">@style/button</item>
+    </style>
+    <style name="button">
+        <!--        <item name="android:layout_width">@dimen/all_iv_size40</item>-->
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:paddingHorizontal" tools:targetApi="o">@dimen/space_10</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">7pt</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/bg_button</item>
+    </style>
+    <style name="MyTextview_bold" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/montserratextrabold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">8.5pt</item>
+    </style>
+
+    <style name="counterOverride">
+        <item name="android:textColor">@color/red</item>
+    </style>
+    <style name="Theme.JollyMatka.Material2" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="titleTextColor">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textViewStyle">@style/descText</item>
+        <item name="android:fontFamily">@font/mons</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryDark</item>
+    </style>
+
+    <style name="bottomsheet" parent="Animation.Design.BottomSheetDialog">
+        <item name="color">@color/white</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="Theme.JollyMatka.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.JollyMatka.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="headingText" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/mons</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="descText" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/mons</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="appnameText" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/mons</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="MyAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+    <style name="ToolbarColoredBackArrowMaterial" parent="Theme.JollyMatka.Material">
+        <item name="android:textColorSecondary">@color/colorPrimaryDark</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="MyRatingBar" parent="Widget.AppCompat.RatingBar">
+        <item name="colorAccent">#6200ea</item>
+        <item name="android:colorControlNormal">#f9a825</item>
+    </style>
+
+    <style name="AlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!--                <item name="android:background">#FFEB3B</item>-->
+        <item name="android:textSize">18sp</item>\
+        <item name="fontFamily">@font/mons</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="mycheckbox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:textColor">@color/black</item>
+        <item name="fontFamily">@font/mons</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="Theme.AppCompat.Light.NoActionBar" />
+
+    <style name="MyHintStyle" parent="@android:style/TextAppearance">
+    </style>
+
+    <style name="TextInputLayoutHintText">
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="MyRadioButton" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:textSize">@dimen/space_14</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="fontFamily">@font/mons</item>
+        <item name="buttonTint">@color/white</item>
+
+    </style>
+    <style name="headingTextWhite" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/mons</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="bidText" parent="Widget.AppCompat.TextView">
+        <item name="android:fontFamily">@font/mons</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:padding">10dp</item>
+        <item name="hintTextColor">@color/white</item>
+    </style>
+    <style name="bid_autoText" parent="Widget.AppCompat.AutoCompleteTextView">
+        <item name="android:fontFamily">@font/mons</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textColorHint">@color/white</item>
+    </style>
+
+    <style name="spinner_style" parent="Widget.AppCompat.Spinner">
+        <item name="android:gravity">start</item>
+<!--        <item name="android:background">@drawable/spiner_bg</item>-->
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAlignment">viewStart</item>
+    </style>
+
+</resources>

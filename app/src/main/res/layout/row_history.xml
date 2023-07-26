@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="#EDF5F8"
+        android:layout_margin="5dp">
+        <RelativeLayout
+            android:background="@drawable/outline"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/space_5"
+                android:weightSum="5">
+                <LinearLayout
+                    android:background="@drawable/bg_circle"
+                    android:layout_width="30dp"
+                    android:backgroundTint="@color/light_green"
+                    android:gravity="center"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight=".5">
+                    <ImageView
+                        android:id="@+id/iv_icon"
+                        android:layout_width="@dimen/space_40"
+                        android:layout_height="@dimen/space_40"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/withdraw" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="4.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/bid_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:visibility="gone" />
+                    <LinearLayout
+                        android:padding="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            style="@style/MyTextview_bold"
+                            android:id="@+id/game_name"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="name"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/tv_14sp"
+
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:padding="6dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+
+                        <TextView
+                            android:id="@+id/txtDigit"
+                            android:text="digit"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="2dp"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/tv_14sp" />
+
+                        <TextView
+
+
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:padding="2dp"
+
+                            android:id="@+id/points"
+                            android:text="points"
+                            android:textSize="@dimen/tv_14sp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/status"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
+                            android:textColor="#316D35"
+                            android:textSize="@dimen/tv_14sp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:padding="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/game_type"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:padding="@dimen/space_2"
+                            android:text="date"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/tv_14sp" />
+
+                        <TextView
+                            android:gravity="center"
+                            android:id="@+id/txtDate"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="@dimen/space_2"
+                            android:text="time"
+                            android:textSize="@dimen/tv_14sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/space_10"
+    tools:context=".Activity.StarhistoryActivity">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="10dp"
+        android:elevation="@dimen/space_10"
+        android:layout_height="wrap_content">
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_10"
+        android:orientation="vertical">
+
+        <TextView
+
+            android:layout_margin="5dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:padding="@dimen/space_5"
+            android:text=" Result By Date  :"/>
+
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="10dp"
+        android:elevation="@dimen/space_10"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+android:visibility="visible"
+            android:id="@+id/lin_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_10"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_margin="5dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:padding="@dimen/space_5"
+                android:text="Select Date :"/>
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:padding="@dimen/space_5"
+                android:text="Date "/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_weight=".2"
+                android:id="@+id/btn_search"
+               android:layout_gravity="center"
+
+                app:civ_circle_background_color="@color/light_blue"
+
+                android:layout_width="30dp"
+                android:layout_height="@dimen/space_30"
+                android:textStyle="bold"
+                android:padding="@dimen/space_1"
+                app:tint="@color/white"
+               android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+             />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rec_starline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</LinearLayout>

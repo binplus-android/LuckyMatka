@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".Activity.ChangeActivity">
+    <RelativeLayout
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/background_layout"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/logo_size_width"
+                android:layout_height="@dimen/logo_size_height"
+                android:layout_centerInParent="true"
+                android:src="@drawable/logo"
+                android:padding="@dimen/space_3"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal" />
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:elevation="5dp"
+                android:layout_marginTop="50pt">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/space_20"
+                            android:paddingRight="@dimen/space_20">
+
+                            <TextView
+                                style="@style/headingText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+                                android:layout_marginTop="@dimen/space_10"
+                                android:gravity="center"
+                                android:layout_marginHorizontal="@dimen/editTextHoriMargin"
+                                android:text="Old Password" />
+
+                            <EditText
+                                android:id="@+id/et_oldpass"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/button_hieght_45dp"
+                                android:inputType="textPassword"
+                                android:layout_marginTop="@dimen/space_10"
+                                android:hint="Old Password"
+                                android:elevation="@dimen/elevation"
+                                style="@style/editText"/>
+
+
+                            <TextView
+                                style="@style/headingText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:textSize="@dimen/space_14"
+                                android:text="New Password" />
+
+                            <EditText
+                                android:id="@+id/et_pass"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/button_hieght_45dp"
+                                android:inputType="textPassword"
+                                android:layout_marginTop="@dimen/space_10"
+                                android:hint="New Password"
+                                android:elevation="@dimen/elevation"
+                                style="@style/editText"/>
+
+                            <RelativeLayout
+                                android:id="@+id/rel_go"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/button_hieght_45dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="@dimen/space_20"
+                                android:background="@drawable/bg_button"
+                                android:elevation="@dimen/elevation"
+                                android:gravity="center">
+
+                                <TextView
+                                    style="@style/headingText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="Submit"
+                                    android:textSize="@dimen/space_14"
+                                    android:textStyle="normal" />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

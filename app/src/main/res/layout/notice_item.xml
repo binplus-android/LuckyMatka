@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:outlineSpotShadowColor="@color/colorPrimary"
+            android:outlineAmbientShadowColor="@color/colorPrimary"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            app:cardCornerRadius="8dp">
+            <LinearLayout
+                android:background="@drawable/et_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+
+                >
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:padding="3dp"
+            android:background="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+           android:gravity="center"
+            />
+        <View
+            android:id="@+id/lw3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:visibility="gone"
+            android:background="@color/colorPrimaryDark"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+
+            />
+
+                <TextView
+                    android:id="@+id/detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Details"
+                    android:layout_marginLeft="@dimen/space_10"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+
+
+                    />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

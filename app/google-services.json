@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "986543000610",
+    "project_id": "lucky-matka-fe98c",
+    "storage_bucket": "lucky-matka-fe98c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:986543000610:android:6d4346f5a664fefc7d4e7b",
+        "android_client_info": {
+          "package_name": "in.games.luckymatkagames"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "986543000610-b78tenmupeievgei9q27qhq92rp9hebh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "in.games.luckymatkagames",
+            "certificate_hash": "efbd6196178e7982f469ff13fe71dd63b8e9c810"
+          }
+        },
+        {
+          "client_id": "986543000610-jni8n4uqm9ktvkokqj5sd8uno5skjaa3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAaO9G-5Wlg5nwKckIyfvA8xB8oQbZn_Uk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "986543000610-jni8n4uqm9ktvkokqj5sd8uno5skjaa3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

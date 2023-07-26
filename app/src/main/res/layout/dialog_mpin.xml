@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+
+
+
+
+            <EditText
+                android:id="@+id/et_mpin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/et_bg"
+                android:padding="10dp"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                android:hint="Enter M-Pin"
+                android:maxLength="4"
+                android:inputType="number"
+                android:layout_margin="10dp"
+
+                 />
+
+
+
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            app:cornerRadius="@dimen/space_20"
+            app:backgroundTint="@color/white"
+
+            android:text="Submit"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_gravity="center"
+            android:visibility="visible"
+            android:layout_centerInParent="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/space_10"
+            android:id="@+id/btn_gen"/>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        android:background="@color/white"
+    tools:context=".Activity.HowtoPlayActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/space_10"
+            android:orientation="vertical">
+
+                <com.airbnb.lottie.LottieAnimationView
+                        android:visibility="gone"
+                        android:id="@+id/animationView"
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        app:lottie_rawRes="@raw/watchnow_man"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"/>
+
+
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+
+                android:orientation="vertical">
+            <ImageView
+                android:layout_width="@dimen/logo_size_width"
+                android:layout_gravity="center"
+
+                android:src="@drawable/logo"
+                android:layout_height="@dimen/logo_size_height"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:id="@+id/tv_msg"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_15"
+                    android:padding="@dimen/space_5"
+                    android:text=""
+
+
+                    />
+
+
+
+            <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cornerRadius="@dimen/space_20"
+                    android:text="Watch Now"
+                    android:background="@drawable/bg_button"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/space_15"
+                    android:id="@+id/btn_submit"/>
+
+        </LinearLayout>
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
